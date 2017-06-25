@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Product": 6,
+    "Product": 8,
     "Category": 3
   },
   "models": {
@@ -18,7 +18,9 @@
       "2": "{\"name\":\"Coffee\",\"price\":299,\"categoryId\":1,\"id\":2}",
       "3": "{\"name\":\"Tea\",\"price\":199,\"categoryId\":1,\"id\":3}",
       "4": "{\"name\":\"Lemoncake\",\"price\":199,\"categoryId\":2,\"id\":4}",
-      "5": "{\"name\":\"Cheesecake\",\"price\":199,\"categoryId\":2,\"id\":5}"
+      "5": "{\"name\":\"Cheesecake\",\"price\":199,\"categoryId\":2,\"id\":5}",
+      "6": "{\"name\":\"Chair\",\"price\":20000,\"id\":6}",
+      "7": "{\"name\":\"Chip clip\",\"price\":100,\"id\":7}"
     },
     "Category": {
       "1": "{\"name\":\"Drinks\",\"id\":1}",

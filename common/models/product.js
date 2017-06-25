@@ -23,4 +23,46 @@ module.exports = function(Product) {
 
     callback(null, result);
   };
+
+  // Validates minimal length of the name
+  Product.validatesLengthOf('name', {
+    min: 3,
+    message: {
+      min: 'Name should be at least 3 characters'
+    }
+  });
+
+  // Validates uniqueness of the name
+  Product.validatesUniquenessOf('name');
+
+  //Custom validation that the prices is greater than or equal to 0
+  const positiveInteger = /^[0-9]*$/;
+
+  const validatePositiveInteger = function(err) {
+    if (!positiveInteger.test(this.price)) {
+      err();
+    }
+  };
+
+  Product.validate('price', validatePositiveInteger, {
+    message: 'Price should be a positive integer'
+  });
+
+  // Example of using asynchronous validation
+  function validateMinimalPrice(err, done) {
+    const price = this.price;
+
+    process.nextTick(() => {
+      const minimalPriceFromDB = 99;
+
+      if(price < minimalPriceFromDB) {
+        err();
+      }
+      done();
+    })
+  };
+
+  Product.validateAsync('price', validateMinimalPrice, {
+    message: 'Price should be higher than the minimal price in the DB'
+  })
 };
