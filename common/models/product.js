@@ -15,7 +15,7 @@ module.exports = function(Product) {
 
   Product.prototype.buy = function(quantity, callback) {
     if (!validQuantity(quantity)) {
-      return callback(`Invality quantity ${quantity}`);
+      return callback(`Invalid quantity ${quantity}`);
     }
     const result = {
       status: `You bought ${quantity} product(s)`
