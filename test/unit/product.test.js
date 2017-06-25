@@ -56,3 +56,17 @@ describe('Validation', () => {
       });
   });
 });
+
+describe('Hooks', () => {
+  it('should not allow adding a product to a non-existing category', () => {
+    return Product
+      .create({
+          name: 'new category',
+          price: 199,
+          categoryId: 9999
+      })
+      .then(res => expect(res).to.equal(null))
+      .catch(err =>
+        expect(err).to.equal('Error adding product to non-existing category'));
+  });
+});
