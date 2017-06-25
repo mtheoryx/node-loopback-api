@@ -1,0 +1,20 @@
+{
+  "name": "node-loopback-api",
+  "version": "1.0.0",
+  "description": "Code-along for egghead.io course: Build a Node.js REST API with LoopBack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtheoryx/node-loopback-api.git"
+  },
+  "keywords": [],
+  "author": "David R Poindexter III",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtheoryx/node-loopback-api/issues"
+  },
+  "homepage": "https://github.com/mtheoryx/node-loopback-api#readme"
+}
